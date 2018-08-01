@@ -14,6 +14,7 @@ const DEFAULT_STATE = {
 export default function currentUser(state = DEFAULT_STATE, action) {
   switch (action.type) {
     case t.FETCH_CURRENT_USER_SUCCESS:
+      debugger;
       return {
         ...state,
         ...action.user

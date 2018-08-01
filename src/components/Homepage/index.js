@@ -7,6 +7,7 @@ import './style.css';
 export default class Homepage extends Component {
   componentDidMount() {
     this.props.fetchJobsRequest();
+    this.props.fetchCurrentUser();
   }
 
   render() {

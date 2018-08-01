@@ -1,0 +1,39 @@
+.JobCard {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  height: 8rem;
+}
+
+img {
+  height: 6rem;
+  width: 6rem;
+  margin: 1rem;
+}
+
+.job-info {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: start;
+}
+
+li {
+  font-weight: bold;
+
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0.5rem;
+}
+
+.apply-button {
+  background-color: #48a999;
+  color: white;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  height: 3rem;
+  margin-right: 2rem;
+}

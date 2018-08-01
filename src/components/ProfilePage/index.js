@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import './style.css';
 import ProfileCard from '../ProfileCard';
 
-class Profile extends Component {
+class ProfilePage extends Component {
   render() {
     return (
       <div>
-        <ProfileCard />
+        <div>
+          <ProfileCard />
+        </div>
       </div>
     );
   }

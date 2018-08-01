@@ -60,10 +60,12 @@ export default class Header extends Component {
           </div>
           <input type="submit" value="Search" className="search-btn" />
         </form>
-        <div className="profile-area">
-          <img src={profilePic} alt="Profile" />
-          <span>{displayName}</span>
-        </div>
+        <Link to={`/${this.props.currentUsername}`}>
+          <div className="profile-area">
+            <img src={profilePic} alt="Profile" />
+            <span>{displayName}</span>
+          </div>
+        </Link>
       </div>
     );
   }
@@ -77,5 +79,6 @@ Header.defaultProps = {
 Header.propTypes = {
   searchCategories: PropTypes.array,
   displayName: PropTypes.string,
-  profilePic: PropTypes.string
+  profilePic: PropTypes.string,
+  currentUsername: PropTypes.string
 };

@@ -25,14 +25,6 @@ export default class Homepage extends Component {
           salary={job.salary}
           equity={job.equity}
         />
-        // <div key={job.id}>
-        //   <li>
-        //     {job.title} @{job.company}
-        //   </li>
-        //   <li>
-        //     {job.salary} | {job.equity}
-        //   </li>
-        // </div>
       ));
     }
 

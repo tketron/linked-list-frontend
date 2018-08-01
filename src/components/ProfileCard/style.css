@@ -1,0 +1,19 @@
+.profilecard {
+  margin: 6rem;
+  border: solid;
+  height: 300px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.image {
+  border-radius: 50px;
+  align-item: center;
+}
+.edit {
+  align-self: flex-end;
+  margin: 1rem;
+}

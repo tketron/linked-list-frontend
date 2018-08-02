@@ -15,6 +15,7 @@ export default class NoAuthRoute extends Component {
 
     // the component to be rendered by the Route, or a Redirect if not logged in
     function ChildComponent(props) {
+      // debugger;
       if (!isAuthenticated) {
         // pass-thru if not authenticated
         return <RouteComponent {...props} />;

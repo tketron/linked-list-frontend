@@ -13,7 +13,7 @@ export default class ProtectedRoute extends Component {
       component: RouteComponent,
       ...propsForRoute
     } = this.props;
-
+    // debugger;
     // the component to be rendered by the Route, or a Redirect if not logged in
     function ChildComponent(props) {
       if (isAuthenticated) {

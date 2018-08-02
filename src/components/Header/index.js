@@ -60,7 +60,7 @@ export default class Header extends Component {
           </div>
           <input type="submit" value="Search" className="search-btn" />
         </form>
-        <Link to={`/${this.props.currentUsername}`}>
+        <Link to={`/users/${this.props.currentUsername}`}>
           <div className="profile-area">
             <img src={profilePic} alt="Profile" />
             <span>{displayName}</span>

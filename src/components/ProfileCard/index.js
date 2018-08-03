@@ -12,6 +12,7 @@ class ProfileCard extends Component {
         </div>
         <div>{this.props.name}</div>
         <div> Employed By @ {this.props.companyname}</div>
+        <div />
       </div>
     );
   }

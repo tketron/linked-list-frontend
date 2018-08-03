@@ -28,4 +28,7 @@ export const FETCH_JOBS_FAIL = 'FETCH_JOBS_FAIL';
 export const SET_ERROR = 'SET_ERROR';
 export const CLEAR_ERROR = 'CLEAR_ERROR';
 
+export const SEARCH_SUCCESS = 'SEARCH SUCCESS';
+export const SEARCH_FAIL = 'SEARCH_FAIL';
+
 export const LOGOUT = 'LOGOUT';

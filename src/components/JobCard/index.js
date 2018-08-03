@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
+import { callAPI } from '../../services/api';
 
 export default class JobCard extends Component {
+  async jobapplied() {
+    console.log('JOb applied');
+    const result = await callAPI(
+      'Post',
+      `/jobs/${this.props.jobid}/applications`,
+      true
+    );
+  }
+
   render() {
     return (
       <div className="JobCard">
@@ -17,7 +27,9 @@ export default class JobCard extends Component {
             </li>
           </ul>
         </div>
-        <button className="apply-button">Apply</button>
+        <button className="apply-button" onClick={() => this.jobapplied()}>
+          Apply
+        </button>
       </div>
     );
   }

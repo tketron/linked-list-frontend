@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import UserProfilePlaceholder from '../../images/user_placeholder.png';
 import './style.css';
+import { callAPI } from '../../services/api';
+import { Route, Redirect } from 'react-router-dom';
+import ResultPage from '../ResultPage';
+import { search } from '../../store/actions/search';
+import ProtectedRoute from '../../containers/ProtectedRoute';
 
 const DEFAULT_STATE = {
   searchText: '',
@@ -16,6 +21,14 @@ export default class Header extends Component {
   handleSearch = e => {
     e.preventDefault();
     // TODO: search
+    let chossedtype = this.props.searchCategories[this.state.searchCategoryIdx];
+    const searchedtext = this.state.searchText;
+    if (chossedtype === 'people') {
+      chossedtype = 'users';
+    }
+
+    this.props.search({ chossedtype: chossedtype, searchedtext: searchedtext });
+    this.props.history.push('/results'); // send the user to results
   };
 
   handleChange = e => {
@@ -29,6 +42,7 @@ export default class Header extends Component {
   render() {
     const { searchText, searchCategoryIdx } = this.state;
     const { searchCategories, displayName, profilePic } = this.props;
+
     return (
       <div className="Header">
         <Link to="/" className="Header-logo">

@@ -2,7 +2,9 @@ import * as t from '../actionTypes';
 import { callAPI } from '../../../services/api';
 
 export function fetchJobsRequest() {
+  debugger;
   return async dispatch => {
+    debugger;
     try {
       // tell everyone we're making the request
       dispatch({ type: t.FETCH_JOBS_REQUEST });

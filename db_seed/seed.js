@@ -71,8 +71,10 @@ fs.appendFileSync(seedFilePath, companySQL);
 
 //add users, giving them a random company handle
 let userSQL = ``;
+let usernames = [];
 
 for (let u of users) {
+  usernames.push(u.username);
   const company = companyNames[Math.floor(Math.random() * companyNames.length)];
   userSQL += `INSERT INTO users (email, current_company, first_name, last_name, password, photo, username) VALUES ('${
     u.email
@@ -86,7 +88,9 @@ fs.appendFileSync(seedFilePath, userSQL);
 
 //add jobs, assigned to a random company
 let jobSQL = ``;
+let jobCount = 0;
 for (let j of jobs) {
+  jobCount++;
   const company = companyNames[Math.floor(Math.random() * companyNames.length)];
   const equity = Math.random() * 3;
   jobSQL += `INSERT INTO jobs (company, equity, salary, title) VALUES ('${company}', '${equity}', '${j.salary.substring(
@@ -94,7 +98,18 @@ for (let j of jobs) {
   )}', '${j.title}');
   `;
 }
-
 fs.appendFileSync(seedFilePath, jobSQL);
+
+let applicationsSQL = ``;
+let i = 0;
+while (i < 500) {
+  applicationsSQL += `INSERT INTO jobs_users (username, job_id) VALUES ('${
+    usernames[Math.floor(Math.random() * usernames.length)]
+  }', '${Math.floor(Math.random() * jobCount)}');
+  `;
+  i++;
+}
+
+fs.appendFileSync(seedFilePath, applicationsSQL);
 
 fs.appendFileSync(seedFilePath, `\\q`);

@@ -4,6 +4,9 @@ import './style.css';
 
 class ProfileCard extends Component {
   render() {
+    const employedBy = this.props.companyname
+      ? `Employed By @ ${this.props.companyname}`
+      : ``;
     return (
       <div className="profilecard">
         <p className="edit">Edit</p>
@@ -11,7 +14,7 @@ class ProfileCard extends Component {
           <img className="image" src={this.props.image} />
         </div>
         <div>{this.props.name}</div>
-        <div> Employed By @ {this.props.companyname}</div>
+        <div>{employedBy}</div>
         <div />
       </div>
     );

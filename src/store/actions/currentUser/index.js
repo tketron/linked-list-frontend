@@ -16,7 +16,7 @@ export function fetchCurrentUser() {
       );
       dispatch(fetchCurrentUserSuccess(currentUser));
     } catch (error) {
-      dispatch(t.FETCH_CURRENT_USER_FAIL(error));
+      dispatch(fetchCurrentUserFail(error));
       return Promise.reject();
     }
   };

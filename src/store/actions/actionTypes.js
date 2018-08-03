@@ -31,4 +31,8 @@ export const CLEAR_ERROR = 'CLEAR_ERROR';
 export const SEARCH_SUCCESS = 'SEARCH SUCCESS';
 export const SEARCH_FAIL = 'SEARCH_FAIL';
 
+export const APPLY_JOB = 'APPLY_JOB';
+export const APPLY_JOB_ERROR = 'APPLY_JOB_ERROR';
+export const DELETE_APPLICATION = 'DELETE_APPLICATION';
+
 export const LOGOUT = 'LOGOUT';

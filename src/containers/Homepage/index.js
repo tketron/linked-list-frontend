@@ -6,7 +6,8 @@ import { fetchCurrentUser } from '../../store/actions/currentUser';
 function mapStateToProps(reduxState) {
   return {
     currentUser: reduxState.currentUser,
-    jobs: reduxState.jobs
+    jobs: reduxState.jobs,
+    appliedto: reduxState.jobsapplied
   };
 }
 

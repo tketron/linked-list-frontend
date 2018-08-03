@@ -4,16 +4,22 @@ import './style.css';
 import { callAPI } from '../../services/api';
 
 export default class JobCard extends Component {
-  async jobapplied() {
-    console.log('JOb applied');
-    const result = await callAPI(
-      'Post',
-      `/jobs/${this.props.jobid}/applications`,
-      true
-    );
-  }
+  state = {
+    hasappliedto: false
+  };
+
+  handleapply = () => {
+    this.props.applytojob();
+    this.setState({
+      hasappliedto: true
+    });
+  };
 
   render() {
+    let text;
+    if (this.state.hasappliedto == false) {
+      text = 'Apply';
+    } else text = 'Applied';
     return (
       <div className="JobCard">
         <div className="job-info">
@@ -27,8 +33,8 @@ export default class JobCard extends Component {
             </li>
           </ul>
         </div>
-        <button className="apply-button" onClick={() => this.jobapplied()}>
-          Apply
+        <button className="apply-button" onClick={() => this.handleapply()}>
+          {text}
         </button>
       </div>
     );

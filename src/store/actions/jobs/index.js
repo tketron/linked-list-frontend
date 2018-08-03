@@ -17,6 +17,23 @@ export function fetchJobsRequest() {
   };
 }
 
+export function applytojob(jobid) {
+  console.log('Hello');
+  return async dispatch => {
+    try {
+      dispatch({ type: t.APPLY_JOB });
+      let appliedjobs = await callAPI(
+        'Post',
+        `/jobs/${this.props.jobid}/applications`,
+        true
+      );
+      console.log(appliedjobs);
+      dispatch({ type: t.APPLY_JOB, appliedjobs });
+    } catch (e) {
+      dispatch({ type: t.APPLY_JOB_ERROR });
+    }
+  };
+}
 export function fetchJobsSuccess(jobs) {
   return { type: t.FETCH_JOBS_SUCCESS, jobs };
 }

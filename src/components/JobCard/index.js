@@ -26,7 +26,7 @@ export default class JobCard extends Component {
           <img src={this.props.image} alt="Company Logo" />
           <ul>
             <li>
-              {this.props.title} @{this.props.company}
+              {this.props.title} @ {this.props.company}
             </li>
             <li>
               {this.props.salary} | {this.props.equity}

@@ -2,10 +2,10 @@
   margin: 6rem;
   border: solid;
   height: 300px;
-  width: 60%;
+  width: 600px;
   display: flex;
   flex-direction: column;
-
+  background-color: white;
   align-items: center;
 }
 

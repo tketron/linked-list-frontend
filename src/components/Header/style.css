@@ -89,15 +89,20 @@
 
 .profile-area {
   width: 7rem;
+  height: 5.5rem;
   background-color: #718792;
-  height: 100%;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .profile-area img {
-  width: 60%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.profile-area span {
+  font-size: 1rem;
 }

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ProfileCard from '../ProfileCard';
 import JobCard from '../JobCard';
 import Header from '../../containers/Header';
+import './style.css';
 
 export default class ResultPage extends Component {
   render() {
@@ -30,10 +31,12 @@ export default class ResultPage extends Component {
       ));
     }
     return (
-      <div className="ResultPage">
+      <div>
         <Header history={this.props.history} />
-        <h1>Search Results</h1>
-        {results}
+        <div className="ResultPage">
+          <h1>Search Results</h1>
+          {results}
+        </div>
       </div>
     );
   }

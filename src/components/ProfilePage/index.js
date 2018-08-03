@@ -25,13 +25,15 @@ class ProfilePage extends Component {
     return (
       <div>
         <Header history={this.props.history} />
-        <h1>Profile Page</h1>
-        <div>
-          <ProfileCard
-            name={this.state.user.first_name}
-            companyname={this.state.user.current_company}
-            image={this.state.user.photo}
-          />
+        <div className="ProfilePage">
+          <h1>Profile Page</h1>
+          <div>
+            <ProfileCard
+              name={this.state.user.first_name}
+              companyname={this.state.user.current_company}
+              image={this.state.user.photo}
+            />
+          </div>
         </div>
       </div>
     );

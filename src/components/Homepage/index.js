@@ -33,12 +33,7 @@ export default class Homepage extends Component {
 
     return (
       <div>
-        <Header
-          displayName={this.props.currentUser.first_name}
-          profilePic={this.props.currentUser.photo}
-          currentUsername={this.props.currentUser.username}
-          history={this.props.history}
-        />
+        <Header history={this.props.history} />
         <div className="feed">
           <h1>Jobs</h1>
           {displayJobs}

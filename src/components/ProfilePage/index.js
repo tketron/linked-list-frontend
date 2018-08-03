@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './style.css';
 import ProfileCard from '../ProfileCard';
 import { callAPI } from '../../services/api';
+import Header from '../../containers/Header';
 
 class ProfilePage extends Component {
   state = {
@@ -23,6 +24,7 @@ class ProfilePage extends Component {
   render() {
     return (
       <div>
+        <Header history={this.props.history} />
         <h1>Profile Page</h1>
         <div>
           <ProfileCard
